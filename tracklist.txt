@@ -1,0 +1,40 @@
+1	"It's a Me, Mario!"	Voice: Charles Martinet	0:04
+2	Title Theme	Used at the beginning of the game	3:31
+3	Peach's Message	Used when Peach reads her letter, as well as when the player collects enough Power Stars to open a ★ door or Big Star Door	0:09
+4	Opening	Used when one of the Lakitu Bros. first appears	0:35
+5	Super Mario 64 Main Theme	Used on the Bob-omb Battlefield; in Whomp's Fortress; on Tall, Tall Mountain; and on Tiny-Huge Island	2:22
+6	Slider	Used in Rainbow Ride, in Tick Tock Clock, in the slide areas, in most secret courses, and while the player races Koopa the Quick	2:50
+7	Inside the Castle Walls	Used inside the Mushroom Castle	2:00
+8	Looping Steps	Used when the endless stairs are in use	0:28
+9	Dire, Dire Docks	Used in Jolly Roger Bay; Dire, Dire Docks; and The Secret Aquarium	3:06
+10	Lethal Lava Land	Used in Lethal Lava Land and Shifting Sand Land	2:44
+11	Snow Mountain	Used on Cool, Cool Mountain and in Snowman's Land	2:58
+12	Haunted House	Used in Big Boo's Haunt	3:06
+13	Merry-Go-Round	Used in Big Boo's Haunt on the merry-go-round	1:01
+14	Cave Dungeon	Main theme of the Hazy Maze Cave and Wet-Dry World; also heard in the Cavern of the Metal Cap, inside the pyramid of Shifting Sand Land, in the igloo of Snowman's Land, and in Wiggler's cave on Tiny-Huge Island; a cover version of the Super Mario Bros. Underground Theme	3:46
+15	Piranha Plant's Lullaby	Used in Whomp's Fortress when the player is near a Piranha Plant	2:19
+16	Powerful Mario	Used when the player wears a Wing Cap or Vanish Cap, and when the player rides a Koopa Shell	0:55
+17	Metallic Mario	Used when the player wears a Metal Cap	0:55
+18	File Select	Used at the File Select screen	0:44
+19	Correct Solution	Used when the player figures out a problem in any level	0:06
+20	Toad's Message	Used when the player talks to a Toad	0:06
+21	Power Star	Used when the player frees a Power Star	0:09
+22	Race Fanfare	Used when any type of race starts	0:06
+23	Star Catch Fanfare	Used after Mario collects a Power Star for the first time, and after clearing either of the first two Bowser courses	0:05
+24	Game Start	Used at the beginning of every main course	0:05
+25	Course Clear	Used at the end of any course's level	0:07
+26	Game Over	Used after Mario runs out of lives	0:17
+27	Stage Boss	Used in the four stage boss battles in the game: the Big Bob-omb on the Bob-omb Battlefield, the Whomp King in Whomp's Fortress, Eyerok in Shifting Sand Land, and Wiggler on Tiny-Huge Island	1:21
+28	Koopa's Message	Used at the beginning of the game when the player enters the castle, as well as if the player tries to open an inaccessible door	0:06
+29	Koopa's Road	Used in all Bowser courses	2:11
+30	Koopa's Theme	Used in the Dark World and Fire Sea Bowser battles	2:30
+31	Koopa Clear	Used after the player defeats Bowser and claims his key	0:06
+32	Ultimate Koopa	Used in the final Bowser battle	2:51
+33	Ultimate Koopa Clear	Used after the player clears the final Bowser battle	0:28
+34	Ending Demo	Used when Mario is freeing Peach from the castle walls	1:17
+35	Staff Roll	Used in the end credits	3:27
+36	Piranha Plant's Lullaby – Piano	Soundtrack-only song	2:23
+
+Use (?P<track_number>\d*)\t(?P<track_name>.*?)\t
+
+The above text is from the Super Mario Wiki and is available under a Creative Commons license. Attribution must be provided through a list of authors or a link back to the original article. Source: https://www.mariowiki.com/Super_Mario_64_Original_Soundtrack
