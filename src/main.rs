@@ -1,16 +1,10 @@
 use std::fs::*;
 // use std::io;
 use std::io::prelude::*;
+use regex::Regex;
 
 fn main() -> Result<(), std::io::Error> {
-    // todo: path of tracklist and stamps are from argv.
-    // -t path\to\tracklist.note -s path\to\stamps
-    // or to make it easier to run, look for tracklist.txt or stamps.txt
-    // in current directory (File::open, ErrorKind::NotFound => File::create)
-    // wait for file to be overwritten
-    //          ^scope creep
-    // just look for tracklist.txt and stamps.txt then make out.txt
-    
+    // Grabbing the paths from argv is scope creep
     let stamps = match file_ctns("stamps.txt") {
         Ok(ctns) => ctns,
         Err(e) => panic!("{e}"),
@@ -21,11 +15,36 @@ fn main() -> Result<(), std::io::Error> {
         Err(e) => panic!("{e}"),
     };
     
-    println!("{}", tracklist);
+    let mut titles = vec![];
+    let re = Regex::new(r#"^((?P<track_number>\d*)\t"*+(?P<track_name>.*?)"*+\t)"#).unwrap();
+    
+    for (_, [_, _, trk_title]) in re.captures_iter(&tracklist).map(|c| c.extract()) {
+        titles.push(trk_title);
+    }
+    
+    println!("{:?}", titles);
+    
+    let re = Regex::new(r#"([\d.\s]*)"#).unwrap();
+    
+    let mut i = 0;
+    for (_, [ stamp ]) in re.captures_iter(&stamps).map(|c| c.extract()) {
+        let title = titles.get(i);
+        let title = match title {
+            Some(s) => s,
+            None => panic!("out of bounds ig"),
+        };
+        
+        let s = format!("{}{}", stamp, title);
+        println!("{}", s);
+        
+        i+=1
+    }
+    
     Ok(())
 }
 
-//filenames are hardcoded by design (I'll learn argv later)
+
+// filenames are hardcoded by design (I'll learn argv later)
 fn file_ctns(f: &str) -> Result<String, std::io::Error> {
     let mut f = File::open(f)?;
     let mut ctns = String::new();
